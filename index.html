@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Estudos</title>
+  <!-- Ícones do Lucide / FontAwesome via CDN para ilustrar melhor -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo">
+        <i data-lucide="book-open-check"></i>
+        <h1>StudyHub</h1>
+      </div>
+      <div class="user-avatar">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Avatar do Usuário">
+      </div>
+    </header>
+
+    <!-- Busca -->
+    <section class="search-section">
+      <div class="search-box">
+        <i data-lucide="search"></i>
+        <input type="text" placeholder="Buscar por nome do material...">
+      </div>
+    </section>
+
+    <!-- Legenda de Formatos -->
+    <section class="legend-section">
+      <span class="legend-title">Formatos:</span>
+      <div class="badges-group">
+        <span class="badge badge-pdf"><i data-lucide="file-text"></i> PDF</span>
+        <span class="badge badge-video"><i data-lucide="video"></i> Vídeo</span>
+        <span class="badge badge-foto"><i data-lucide="image"></i> Foto</span>
+        <span class="badge badge-nota"><i data-lucide="sticky-note"></i> Nota</span>
+      </div>
+    </section>
+
+    <!-- Filtros Rápido -->
+    <section class="filters-section">
+      <button class="filter-chip active">Todos</button>
+      <button class="filter-chip">PDFs</button>
+      <button class="filter-chip">Vídeos</button>
+      <button class="filter-chip">Notas</button>
+      <button class="filter-chip">Fotos</button>
+    </section>
+
+    <!-- Conteúdo Principal / Painéis de Temas -->
+    <main class="content-section">
+
+      <!-- Tema 1 -->
+      <details class="theme-panel" open>
+        <summary class="theme-header">
+          <div class="theme-info">
+            <span class="theme-title">Aula de Genética</span>
+            <span class="theme-status">3 de 4 concluídos</span>
+          </div>
+          <div class="theme-progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 75%;"></div>
+            </div>
+            <i data-lucide="chevron-down" class="chevron-icon"></i>
+          </div>
+        </summary>
+
+        <div class="materials-list">
+          <!-- Card Material 1 -->
+          <div class="material-card">
+            <div class="material-icon pdf"><i data-lucide="file-text"></i></div>
+            <div class="material-details">
+              <h4>Resumo - Primeira Lei de Mendel</h4>
+              <p>Adicionado em 10/Out • 2.4 MB</p>
+            </div>
+            <span class="badge badge-pdf">PDF</span>
+          </div>
+
+          <!-- Card Material 2 -->
+          <div class="material-card">
+            <div class="material-icon video"><i data-lucide="video"></i></div>
+            <div class="material-details">
+              <h4>Videoaula: Heredogramas</h4>
+              <p>Duração: 15 min</p>
+            </div>
+            <span class="badge badge-video">Vídeo</span>
+          </div>
+
+          <!-- Card Material 3 -->
+          <div class="material-card">
+            <div class="material-icon foto"><i data-lucide="image"></i></div>
+            <div class="material-details">
+              <h4>Esquema de Célula e DNA</h4>
+              <p>Foto da Lousa • JPG</p>
+            </div>
+            <span class="badge badge-foto">Foto</span>
+          </div>
+        </div>
+      </details>
+
+      <!-- Tema 2 -->
+      <details class="theme-panel">
+        <summary class="theme-header">
+          <div class="theme-info">
+            <span class="theme-title">História - Brasil Colônia</span>
+            <span class="theme-status">1 de 3 concluídos</span>
+          </div>
+          <div class="theme-progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 33%;"></div>
+            </div>
+            <i data-lucide="chevron-down" class="chevron-icon"></i>
+          </div>
+        </summary>
+
+        <div class="materials-list">
+          <div class="material-card">
+            <div class="material-icon nota"><i data-lucide="sticky-note"></i></div>
+            <div class="material-details">
+              <h4>Anotações de Ciclo do Açúcar</h4>
+              <p>Criado em 12/Out</p>
+            </div>
+            <span class="badge badge-nota">Nota</span>
+          </div>
+        </div>
+      </details>
+
+      <!-- Botão + Novo tema -->
+      <button class="add-theme-btn">
+        <i data-lucide="plus"></i>
+        <span>Novo tema</span>
+      </button>
+
+    </main>
+
+    <!-- Barra de Navegação Inferior -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item active">
+        <i data-lucide="folder"></i>
+        <span>Materiais</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i data-lucide="calendar"></i>
+        <span>Cronograma</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i data-lucide="pen-tool"></i>
+        <span>Simulados</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i data-lucide="user"></i>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- Script para carregar os ícones -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
